@@ -29,7 +29,7 @@ export const Information1 = () => {
  * 축의금 계좌번호 안내 컴포넌트입니다.
  * 신랑측, 신부측 계좌번호를 모달로 보여줍니다.
  */
-export const Information2 = () => {
+export const Information2 = () => { 
   const donationModalState = useState(false)
   const [isGroom, setIsGroom] = useState(true)
 
