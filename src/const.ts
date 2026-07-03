@@ -27,7 +27,7 @@ export const WEDDING_DATE_FORMAT = `YYYY년 MMMM D일 dddd A h시${WEDDING_DATE.
  * 예식 당월 휴무일 (달력 표시용)
  * 예: 8월 15일 광복절
  */
-export const HOLIDAYS = []
+export const HOLIDAYS = [24,25,26]
 
 /**
  * 예식 장소 명칭
