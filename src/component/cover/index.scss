@@ -1,13 +1,61 @@
 .cover {
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--white-color);
+      padding: 0 1.5rem;
+      z-index: 1;
+    }
+
+    .overlay-top {
+      top: 0;
+      padding-top: 2rem;
+      padding-bottom: 3rem;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0)
+      );
+    }
+
+    .overlay-bottom {
+      bottom: 0;
+      padding-top: 3rem;
+      padding-bottom: 2rem;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0)
+      );
+    }
+  }
+
   .wedding-date {
-    margin-top: 2rem;
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    color: var(--white-color);
     .divider {
-      background-color: var(--dark-color);
+      background-color: var(--white-color);
       width: 1px;
       height: 0.7rem;
     }
@@ -16,26 +64,13 @@
   .wedding-day-of-week {
     font-size: 1.2rem;
     opacity: 0.7;
-    margin-bottom: 1rem;
-  }
-
-  .image-wrapper {
-    width: 100%;
-    height: 30rem;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    img {
-      width: 100%;
-      height: auto;
-    }
+    color: var(--white-color);
   }
 
   .subtitle {
     font-size: 1.5rem;
     font-family: "Allura";
-    color: var(--alt-color);
-    margin-top: 1rem;
+    color: var(--white-color);
   }
 
   .names {
@@ -45,15 +80,17 @@
     justify-content: center;
     align-items: center;
     gap: 0.7rem;
+    color: var(--white-color);
     .divider {
-      background-color: var(--dark-color);
+      background-color: var(--white-color);
       width: 1px;
       height: 0.7rem;
     }
   }
   .info {
     margin-bottom: 0.3rem;
-    opacity: 0.7;
+    opacity: 0.8;
     white-space: pre-line;
+    color: var(--white-color);
   }
 }
