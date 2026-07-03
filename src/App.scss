@@ -13,7 +13,8 @@
 :root {
   --theme-color: #ff8585;
   //--theme-color: #2A5A3B;
-  --theme-bg-color: #ffe7e7;
+  //--theme-bg-color: #ffe7e7;
+  --theme-bg-color: #ffffff;
   //--theme-bg-color: #DFF2D1;
   --alt-color: #c28080;
   //--alt-color: #2A5A3B;
@@ -21,7 +22,8 @@
   --dark-color: #282c34;
   --dark-grey-color: #d2d2d2;
   --light-grey-color: #eaeaea;
-  --light-color: #f9f9f9;
+  --light-color: #ffffff;
+  //--light-color: #f9f9f9
   --white-color: #ffffff;
   --red-color: #ff0000;
 
@@ -149,7 +151,7 @@ body {
 
       .card {
         background-color: var(--light-color);
-        padding: 1rem;
+        //padding: 1rem;
         border: 1px solid var(--light-grey-color);
         width: 50%;
         display: flex;
