@@ -37,7 +37,6 @@ export const Invitation = () => {
         <div className="content">이제 같은 곳을 바라보고 나아가려 합니다.</div>
         <div className="break" />
         <div className="content">서로를 향한 따뜻한 마음으로</div>
-        <div className="content">오늘을 지나</div>
         <div className="content">평생을 함께할 소중한 약속을 하는 날,</div>
         <div className="break" />
         <div className="content">뜻깊은 날에 귀한 걸음으로</div>

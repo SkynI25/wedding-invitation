@@ -9,6 +9,7 @@ import { Information } from "./component/information"
 import { GuestBook } from "./component/guestbook"
 import { LazyDiv } from "./component/lazyDiv"
 import { ShareButton } from "./component/shareButton"
+import { MusicPlayer } from "./component/musicPlayer"
 import { STATIC_ONLY } from "./env"
 
 /**
@@ -54,6 +55,9 @@ function App() {
         {/* 카카오톡/링크 공유 버튼 */}
         <ShareButton />
       </div>
+
+      {/* 배경음악 재생 버튼 */}
+      <MusicPlayer />
     </div>
   )
 }
