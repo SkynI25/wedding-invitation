@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react"
 import {
   BRIDE_FULLNAME,
   GROOM_FULLNAME,
@@ -25,10 +26,21 @@ const DAY_OF_WEEK = [
  * @returns {JSX.Element} 커버 섹션
  */
 export const Cover = () => {
+  const imageWrapperRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    // 모바일 브라우저 주소창 접힘/펼침에 따라 뷰포트 높이가 변하면서
+    // 이미지가 확대/축소되어 보이는 것을 막기 위해, 최초 마운트 시점의
+    // 높이로 한 번만 고정합니다.
+    if (imageWrapperRef.current) {
+      imageWrapperRef.current.style.height = `${window.innerHeight}px`
+    }
+  }, [])
+
   return (
     <LazyDiv className="card cover">
       {/* 커버 이미지 (전체 화면을 채우고 텍스트가 그 위에 오버레이됨) */}
-      <div className="image-wrapper">
+      <div className="image-wrapper" ref={imageWrapperRef}>
         <img src={COVER_IMAGE} alt="sample" />
 
         {/* 상단 오버레이: 날짜 및 요일 */}
