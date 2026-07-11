@@ -69,12 +69,12 @@ $colors: (
   from {
     opacity: 0;
     z-index: 3;
-    //transform: translateY(2rem);
+    transform: translateY(2rem);
   }
   to {
     opacity: 1;
     z-index: 3;
-    //transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
