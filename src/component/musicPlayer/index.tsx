@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import weddingAudio from "../../audio/wedding.m4a"
+import weddingAudio from "../../audio/wedding.mp3"
 import MusicIcon from "../../icons/music-icon.svg?react"
 
 /**
