@@ -51,6 +51,15 @@ export const Gallery = () => {
   const modalState = useState(false)
   const carouselRef = useRef<HTMLDivElement>({} as HTMLDivElement)
 
+  // 사진 전체보기 목록에서 클릭한 사진을 확대해서 보여주는 팝업의 상태
+  const [zoomIndex, setZoomIndex] = useState<number | null>(null)
+  const zoomModalState: [boolean, (open: boolean) => void] = [
+    zoomIndex !== null,
+    (open) => {
+      if (!open) setZoomIndex(null)
+    },
+  ]
+
   useEffect(() => {
     // 이미지 프리로드 (Preload)
     GALLERY_IMAGES.forEach((image) => {
@@ -417,14 +426,7 @@ export const Gallery = () => {
                 src={image}
                 alt={`${idx}`}
                 draggable={false}
-                onClick={() => {
-                  if (statusRef.current === "stationary") {
-                    if (idx !== slideRef.current) {
-                      move(slideRef.current, idx)
-                    }
-                    modalState[1](false)
-                  }
-                }}
+                onClick={() => setZoomIndex(idx)}
               />
             ))}
           </div>
@@ -439,6 +441,21 @@ export const Gallery = () => {
             닫기
           </Button>
         </div>
+      </Modal>
+
+      {/* 사진 확대 보기 팝업 */}
+      <Modal
+        modalState={zoomModalState}
+        className="photo-zoom-modal"
+        closeOnClickBackground={true}
+      >
+        {zoomIndex !== null && (
+          <img
+            src={GALLERY_IMAGES[zoomIndex]}
+            alt={`${zoomIndex}`}
+            draggable={false}
+          />
+        )}
       </Modal>
     </>
   )

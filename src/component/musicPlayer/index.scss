@@ -7,6 +7,17 @@
   }
 }
 
+@keyframes char-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .music-player {
   position: fixed;
   right: 1rem;
@@ -31,5 +42,44 @@
   &.playing .icon {
     opacity: 1;
     animation: spin 4s linear infinite;
+  }
+}
+
+.welcome-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 1s ease;
+  pointer-events: auto;
+
+  &.faded {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .welcome-text {
+    font-family: "Allura";
+    font-weight: 400;
+    font-size: 4.2rem;
+    color: var(--white-color);
+    text-align: center;
+    padding: 0 0.5rem;
+    margin-top: 3rem;
+
+    .welcome-line {
+      line-height: 1.3;
+    }
+
+    .char {
+      display: inline-block;
+      opacity: 0;
+      color: var(--white-color);
+      animation: char-in 0.4s ease forwards;
+    }
   }
 }
