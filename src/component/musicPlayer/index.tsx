@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import weddingAudio from "../../audio/wedding.mp3"
 import MusicIcon from "../../icons/music-icon.svg?react"
 
-const WELCOME_LINES = ["Welcome to", "to our wedding"]
+const WELCOME_LINES = ["Welcome", "to our wedding"]
 // 글자가 한 자씩 그려지는 속도 (초 단위 지연 간격)
 const WELCOME_CHAR_DELAY = 0.09
 // 한 글자씩 나타나는 애니메이션이 끝까지 보이도록 웰컴 화면의 최소 노출 시간을 확보합니다.
