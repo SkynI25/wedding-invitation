@@ -3,8 +3,10 @@ import weddingAudio from "../../audio/wedding.mp3"
 import MusicIcon from "../../icons/music-icon.svg?react"
 
 const WELCOME_LINES = ["Welcome to", "to our wedding"]
+// 글자가 한 자씩 그려지는 속도 (초 단위 지연 간격)
+const WELCOME_CHAR_DELAY = 0.09
 // 한 글자씩 나타나는 애니메이션이 끝까지 보이도록 웰컴 화면의 최소 노출 시간을 확보합니다.
-const WELCOME_MIN_DURATION = 1800
+const WELCOME_MIN_DURATION = 2900
 
 // 두 줄에 걸쳐 순서대로 나타나도록, 줄이 바뀌어도 글자 지연시간이 이어지게 미리 계산해둡니다.
 const WELCOME_LINE_CHARS = (() => {
@@ -124,7 +126,7 @@ export const MusicPlayer = () => {
                 <span
                   key={idx}
                   className="char"
-                  style={{ animationDelay: `${index * 0.05}s` }}
+                  style={{ animationDelay: `${index * WELCOME_CHAR_DELAY}s` }}
                 >
                   {char === " " ? " " : char}
                 </span>

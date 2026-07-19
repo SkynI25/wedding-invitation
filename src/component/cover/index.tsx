@@ -62,7 +62,7 @@ export const Cover = () => {
 
         {/* 하단 오버레이: 부제 및 이름 */}
         <div className="overlay overlay-bottom">
-          <div className="subtitle">Save the date for the wedding of</div>
+          {/* <div className="subtitle">Save the date for the wedding of</div> */}
           <div className="names">
             {GROOM_FULLNAME}
             <div className="divider" />
